@@ -39,7 +39,7 @@ def parseDrug(drugData):
         for product in products.findall('{http://www.drugbank.ca}product'):
             brandName = product.find('{http://www.drugbank.ca}name').text.lower()
             drugBrandNames.add(brandName)
-    except KeyError:
+    except:
         print("Error: could not retrieve brand name data of drug")
         exit()
 
